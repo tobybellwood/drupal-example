@@ -1,4 +1,4 @@
-uuid: 6c30fb56-ba77-4227-b21a-d8f1d7b2b096
+uuid: 0e5c155a-686a-46ad-87d3-dc4c100310ef
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - dblog
     - user
 _core:
-  default_config_hash: 3QZ9apklK6mQ7BzodmxzOxqO---2BCPtOLE3k9eQ0Is
+  default_config_hash: oG4FVrpj6HxivwdvkAyY23ApbR-iWTnKvM4JHdJ6XmA
 id: watchdog
 label: Watchdog
 module: views
@@ -658,18 +658,16 @@ display:
       footer: {  }
       empty:
         area:
-          id: area
+          id: area_text_custom
           table: views
-          field: area
+          field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'No log messages available.'
           empty: true
           tokenize: false
-          content:
-            value: 'No log messages available.'
-            format: basic_html
-          plugin_id: text
+          content: 'No log messages available.'
+          plugin_id: text_custom
       relationships:
         uid:
           id: uid

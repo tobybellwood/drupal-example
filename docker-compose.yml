@@ -83,7 +83,7 @@ services:
 
 
   mariadb:
-    image: amazeeio/mariadb-drupal
+    image: amazeeiolagoon/mariadb-drupal:pr-892
     labels:
       lagoon.type: mariadb
     ports:
@@ -101,7 +101,7 @@ services:
       << : *default-environment
 
   solr:
-    image: amazeeio/solr:6.6-drupal
+    image: amazeeiolagoon/solr:7.7-drupal-pr-1731
     labels:
       lagoon.type: solr
     ports:
