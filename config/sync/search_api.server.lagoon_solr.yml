@@ -1,11 +1,11 @@
-uuid: eaff5d99-fcd2-4d3f-a209-93d2a98a73ea
+uuid: 56e081f1-4460-4153-a136-3f55a0f17865
 langcode: en
 status: true
 dependencies:
   module:
     - search_api_solr
-id: solr
-name: solr
+id: lagoon_solr
+name: 'Lagoon Solr'
 description: ''
 backend: search_api_solr
 backend_config:
@@ -13,20 +13,22 @@ backend_config:
   connector_config:
     scheme: http
     host: solr
-    port: '8983'
-    path: /solr
+    port: 8983
+    path: /
     core: drupal
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10
+    finalize_timeout: 30
     commit_within: 1000
     solr_version: ''
     http_method: AUTO
   retrieve_data: false
   highlight_data: false
-  excerpt: false
   skip_schema_check: false
+  domain: generic
   site_hash: false
-  suggest_suffix: true
-  suggest_corrections: true
-  suggest_words: false
+  server_prefix: ''
+  environment: default
+  optimize: false
+  rows: 10
